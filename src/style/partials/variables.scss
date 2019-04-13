@@ -1,0 +1,24 @@
+//colors
+
+$primary-color: #32325d;
+$secondary-color: #507ceb;
+$placeholder-gray: #728095;
+$border-color: #e6e9ee;
+
+
+// Breakpoints
+$highdensity: "only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+"only screen and (min--moz-device-pixel-ratio: 1.5)",
+"only screen and (-o-min-device-pixel-ratio: 3/2)",
+"only screen and (min-device-pixel-ratio: 1.5)";
+$w480:   "only screen and (max-width: 480px)";
+$w640:   "only screen and (max-width: 640px)";
+$w767:      "only screen and (max-width: 767px)";
+$w991:      "only screen and (max-width: 991px)";
+$w1023:      "only screen and (max-width: 1023px)";
+$w1200:      "only screen and (max-width: 1200px)";
+$tablet:      "only screen and (min-width: 768px) and (max-width: 1023px)";
+$desktop:     "only screen and (min-width: 1024px) and (max-width: 1199px)";
+$desktop-xl:  "only screen and (max-width: 1680px)";
+$desktop-xl-max: "only screen and (min-width: 1680px)";
+$desktop-xl-min:  "only screen and (min-width: 1366px)";
