@@ -5,22 +5,17 @@
 
 
 ::placeholder {
-	color: #666;
-}
-
-::selection {
-	background-color: $accent;
-	color: #fff;
+	color: #666;  
 }
 
 body {
+	height: 2000px;
 	font-size: 16px;
 	min-width: 320px;
 	position: relative;
 	line-height: 1.65;
-	font-family: $default-font;
+	font-family: $main-font;
 	overflow-x: hidden;
-	color: $text;
 	input, textarea {
 		border: #666 1px solid;
 		outline: none;
@@ -33,5 +28,11 @@ body {
 	}
 }
 
-
-@import "media"; // Always at the end
+.header {
+    height: 100vh;
+    background: url('./../img/header.png');    
+    color: #fff;
+    &-top {
+    	padding: 45px 0;
+    }
+}
