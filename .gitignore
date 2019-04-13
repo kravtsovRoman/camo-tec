@@ -1,4 +1,9 @@
-
-node_modules
-build
-package-lock.json
+/node_modules/
+/.idea/
+/dist/
+/.git/
+/app/css/
+/**/_backstage
+/**/package-lock.json
+/**/Thumbs.db
+/**/*.DS_Store
