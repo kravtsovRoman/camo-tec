@@ -15,7 +15,7 @@ button {
 }
 
 body {
-	height: 2000px;
+	height: 5000px;
 	font-size: 16px;
 	min-width: 320px;
 	position: relative;
@@ -35,12 +35,12 @@ body {
 }
 
 .custom-container {
-	max-width: 1200px;
+	max-width: 1170px;
 	margin: 0 auto;
 }
 
 .line {
-	width: 1000px;
+	width: 700px;
 	height: 6px;
 	background: $main-color;
 	opacity: .6;
@@ -68,7 +68,7 @@ body {
 	margin: 0 auto 50px;
 }
 
-.red-line {
+.warning {
 	width: 100%;
 	background: $main-color;
 	color: #fff;
@@ -76,6 +76,20 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 12px 0;
+	position: relative;
+	.bg-line {
+		position: absolute;
+		background-image: url('../img/little.png');
+		background-size: 37px;
+		width: 100%;
+		height: 10px;
+		&.top {
+			top: 0;
+		}
+		&.bottom {
+			bottom: 0;
+		}
+	}
 	.alarm-image {
 		margin-right: 5px;
 		width: 37px;
@@ -86,9 +100,12 @@ body {
 	}
 }
 
+
+
+
 .header {
 	position: relative;
-	height: 100vh;
+	height: 100vh; 
 	overflow: hidden;
 	background-image: url('./../img/header.png');   
 	background-size: cover; 
@@ -213,6 +230,86 @@ body {
 			font-size: 18px;
 			line-height: 21px;
 			text-align: center;
+			cursor: pointer;
+			outline: none;
+		}
+	}
+}
+
+
+
+.section-2 {
+	.blocks {
+		padding-top: 90px;
+		padding-bottom: 120px;
+		.block {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			margin-top: -30px;
+			&:nth-of-type(n+3) {
+				.number {
+					line-height: 170px;
+				}
+			}
+			&:nth-of-type(6) {
+				.number {
+					line-height: 141px;
+				}
+			}
+			&-text {
+				width: 600px;
+				.number {
+					color: $main-color;
+					font-family: $second-font;
+					font-weight: 600;
+					font-size: 120px;
+					line-height: 141px;
+					margin-top: 30px;
+					margin-bottom: -20px;
+					span {
+						display: inline-block;
+						position: relative;
+					}
+					.line {
+						bottom: 26px;
+					}
+				}
+				.title {
+					font-size: 25px;
+				}
+				.description {
+					margin-left: 60px;
+				}
+			}
+			&-img {
+				width: 470px;
+				height: 470px;
+				z-index: 5;
+				img {
+					width: 100%;
+				}
+			}
+			&-right {
+				.line {
+					left: calc(100% + 18px);
+				}
+				.block-img {
+					margin-left: 30px;
+				}
+			}
+			&-left {
+				.number {
+					text-align: right;
+				}
+				.block-img {
+					margin-right: 30px;
+				}
+				.line {
+					right: calc(100% + 18px);
+				}
+			}
 		}
 	}
 }
