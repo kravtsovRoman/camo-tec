@@ -3,6 +3,10 @@
 @import "libs";
 @import "reset";
 
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css";
+
+// @import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.scss";
+
 
 ::placeholder {
 	color: #666;  
@@ -15,7 +19,7 @@ button {
 }
 
 body {
-	height: 5000px;
+	padding-bottom: 500px;
 	font-size: 16px;
 	min-width: 320px;
 	position: relative;
@@ -37,6 +41,9 @@ body {
 .custom-container {
 	max-width: 1170px;
 	margin: 0 auto;
+	@media screen and (max-width: 1200px) {
+		padding: 0 20px;
+	}
 }
 
 .line {
@@ -309,6 +316,186 @@ body {
 				.line {
 					right: calc(100% + 18px);
 				}
+			}
+		}
+	}
+}
+
+
+
+.section-3 {
+	padding-top: 75px;
+	.section-title {
+		margin: 0;
+		max-width: 250px;
+		text-align: left;
+		margin-bottom: 23px;
+		position: relative;
+		.line {
+			background: $secondary-color;
+			bottom: 10px;
+			left: 100%;
+			opacity: .8;
+		}
+		&+span {
+			font-family: $second-font;
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+	.blocks {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.block {
+			&-text {
+				max-width: 600px;
+			}
+			&-img {
+				width: 525px;
+				overflow: hidden;
+				z-index: 5;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+
+
+.section-4 {
+	.section {
+		&-description {
+			font-size: 20px;
+			margin-bottom: 50px;
+		}
+	}
+	.table-main {
+		padding: 15px 40px;
+		max-width: 780px;
+		color: #878787;
+		background: #F9F9F9;
+		margin: 0 auto; 
+		ul {
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			border-bottom: 2px solid #f1f1f1;
+			&:last-of-type {
+				border-bottom: 0;
+			}
+			li {
+				width: 65px;
+				border-left: 2px solid #f1f1f1;
+				padding: 5px 0;
+				&:first-of-type {
+					width: 200px;
+					border-left: 0;
+					text-align: left;
+				}
+			}
+		}
+	}
+	.blocks {
+		.block {
+			display: flex;
+			padding: 60px 0;
+			&-img {
+				display: flex;
+				justify-content: flex-end;
+				width: 50%;
+				position: relative;
+				.images {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					margin-right: 40px;
+					margin-top: -75px;
+					a {
+						width: 75px;
+						height: 75px;
+						border-radius: 50%;
+						margin-bottom: 10px;
+						overflow: hidden;
+						&:first-of-type {
+							background-image: url(../img/section-4/cart1/1.png);
+							background-size: contain;
+							background-repeat: no-repeat;
+							background-position-y: 10px;
+							position: absolute;
+							transform: translateY(-50%);
+							top: 50%;
+							right: 125px;
+							width: 400px;
+							min-height: 435px;
+							height: auto;
+							margin-bottom: 0;
+							&:hover {
+								background-image: url(../img/section-4/cart1/2.png);
+							}
+						}
+						img {
+							width: 100%;
+						}
+					}
+					&-2 {
+						a {
+							&:first-of-type {
+								background-image: url(../img/section-4/cart2/1.png);
+								&:hover {
+									background-image: url(../img/section-4/cart2/2.png);
+								}
+							}
+						}
+					}
+					&-3 {
+						a {
+							&:first-of-type {
+								background-image: url(../img/section-4/cart3/1.png);
+								&:hover {
+									background-image: url(../img/section-4/cart3/2.png);
+								}
+							}
+						}
+					}
+					&-4 {
+						a {
+							&:first-of-type {
+								background-image: url(../img/section-4/cart4/1.png);
+								&:hover {
+									background-image: url(../img/section-4/cart4/2.png);
+								}
+							}
+						}
+					}
+					&-5 {
+						a {
+							&:first-of-type {
+								background-image: url(../img/section-4/cart5/1.png);
+								&:hover {
+									background-image: url(../img/section-4/cart5/2.png);
+								}
+							}
+						}
+					}
+					&-6 {
+						a {
+							&:first-of-type {
+								background-image: url(../img/section-4/cart6/1.png);
+								&:hover {
+									background-image: url(../img/section-4/cart6/2.png);
+								}
+							}
+						}
+					}
+				}
+			}
+			&-text {
+				width: 570px;
+				background: #eee;
 			}
 		}
 	}
