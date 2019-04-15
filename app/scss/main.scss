@@ -600,7 +600,6 @@ body {
 				height: 430px;
 				z-index: 5;
 				background-size: cover;
-				background-image: url('../img/section-5/Artboard\ 6.png');
 			}
 			&-text {
 				width: 47%;
@@ -615,6 +614,7 @@ body {
 					font-size: 25px;
 					line-height: 30px;
 					position: relative;
+					color: $secondary-color;
 				}
 				&-description {
 					font-size: 18px;
