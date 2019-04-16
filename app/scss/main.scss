@@ -540,10 +540,17 @@ body {
 						padding-left: 10px;
 						outline: none;
 						border: 0;
+						color: $main-color;
+						font-size: 20px;
+						font-weight: 600;
 						position: relative;
+						cursor: pointer;
 						webkit-appearance: none;
 						-moz-appearance: none;
 						appearance: none;
+						option {
+							background: #fff; 
+						}
 					}
 					label {
 						border: 7px solid transparent;	
@@ -595,11 +602,23 @@ body {
 			display: flex;
 			align-items: center; 
 			margin-top: -40px;
+			&-icon {
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				z-index: 100;
+				left: 30%;
+				right: auto;
+				img {
+					width: 100%;
+				}
+			}
 			&-img {
 				width: 53%;
 				height: 430px;
 				z-index: 5;
 				background-size: cover;
+				background-position: center;
 			}
 			&-text {
 				width: 47%;
@@ -641,8 +660,17 @@ body {
 							left: 100%; 
 						}
 					}
+					&-icon {
+						left: auto;
+						right: 30%;
+					}
 				}
 			}
 		}
 	}
+}
+
+
+.section-6 {
+	padding-top: 70px;
 }
