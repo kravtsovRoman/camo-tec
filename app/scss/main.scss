@@ -611,7 +611,7 @@ body {
 				width: 200px;
 				height: 200px;
 				z-index: 100;
-				left: 30%;
+				left: 35%;
 				right: auto;
 				img {
 					width: 100%;
@@ -666,7 +666,7 @@ body {
 					}
 					&-icon {
 						left: auto;
-						right: 30%;
+						right: 35%;
 					}
 				}
 			}
@@ -721,7 +721,7 @@ body {
 			&-icon {
 				display: block;
 				min-width: 64px;
-				width: 64px;
+				width: 64px; 
 				height: 64px;
 				border: 4px solid $main-color;
 				margin-right: 25px;
