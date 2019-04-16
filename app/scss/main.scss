@@ -219,7 +219,7 @@ body {
 			line-height: 36px;
 		}
 		&_title {
-			font-weight: bold;
+			font-weight: 900;
 			font-size: 70px;
 			line-height: 82px;
 			margin-bottom: 45px;
@@ -271,6 +271,7 @@ body {
 			}
 			&-text {
 				width: 600px;
+				margin-top: -40px;
 				.number {
 					color: $main-color;
 					font-family: $second-font;
@@ -288,6 +289,8 @@ body {
 				}
 				.title {
 					font-size: 25px;
+					color: $secondary-color;
+					font-family: $second-font-bold;
 				}
 				.description {
 					margin-left: 60px;
@@ -337,7 +340,7 @@ body {
 		.line {
 			background: $secondary-color;
 			bottom: 10px;
-			left: 100%;
+			left: calc(100% - 15px);
 			opacity: .8;
 		}
 		&+span {
@@ -403,7 +406,7 @@ body {
 		}
 	}
 	.blocks {
-		padding-bottom: 60px;
+		padding: 60px 0;
 		.block {
 			display: flex;
 			padding: 60px 0;
@@ -540,6 +543,7 @@ body {
 						padding-left: 10px;
 						outline: none;
 						border: 0;
+						background: #fff;
 						color: $main-color;
 						font-size: 20px;
 						font-weight: 600;
@@ -557,7 +561,7 @@ body {
 						border-top: 7px solid $main-color;
 						position: absolute;
 						right: 5px;
-						top: 65%;
+						top: 60%;
 						transform: translateY(-50%);
 						z-index: 5;
 					}
