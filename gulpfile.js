@@ -33,6 +33,7 @@ gulp.task('js', function () {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+		'app/libs/owl-carousel/owl.carousel.min.js',
 		// All JS files add here...
 		'app/js/common.js', // Always at the end
 	])

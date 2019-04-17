@@ -17,7 +17,14 @@ $(document).ready(function () {
     //     $('body,html').animate({scrollTop: $('body,html').offset().top}, 500);
     // });
 
-
+    //Slider reviews
+    $(".owl-carousel").owlCarousel({
+        items: 1,
+        dots: true,
+        center: true,
+        autoWidth: true,
+        margin: 500,
+    });
 
     // @Fancybox on Screenshot page
     $(function () {

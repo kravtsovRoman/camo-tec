@@ -9,7 +9,8 @@
 
 
 ::placeholder {
-	color: #666;   
+	color: #fff; 
+	opacity: .5;  
 }
 
 .button {
@@ -33,7 +34,6 @@
 }
 
 body {
-	padding-bottom: 500px;
 	font-size: 16px;
 	min-width: 320px;
 	position: relative;
@@ -121,6 +121,14 @@ body {
 	}
 }
 
+.logo {
+	width: 120px;
+	margin-right: 20px;
+	img {
+		width: 100%;
+	}
+}
+
 
 
 
@@ -131,13 +139,7 @@ body {
 	background-image: url('./../img/header.png');   
 	background-size: cover; 
 	color: #fff;
-	.logo {
-		width: 120px;
-		margin-right: 20px;
-		img {
-			width: 100%;
-		}
-	}
+	
 	.navbar-toggler {
 		color: #fff;
 		border: 0;
@@ -291,6 +293,7 @@ body {
 					font-size: 25px;
 					color: $secondary-color;
 					font-family: $second-font-bold;
+					margin-bottom: 4px;
 				}
 				.description {
 					margin-left: 60px;
@@ -630,7 +633,6 @@ body {
 				display: flex;
 				flex-direction: column;
 				&-title {
-					margin-bottom: 10px;
 					margin: 0 50px;
 					padding: 0 15px;
 					font-family: $second-font-bold;
@@ -640,6 +642,7 @@ body {
 					color: $secondary-color;
 				}
 				&-description {
+					margin-top: 10px;
 					font-size: 18px;
 					font-weight: 600;
 					color: #1C0700;
@@ -699,10 +702,11 @@ body {
 			color: #fff;
 			font-weight: 400;
 			margin-bottom: 20px;
+			max-width: 1000px;
 		}
 	}
 	.blocks {
-		margin: 85px auto;
+		margin: 85px auto 0 auto;
 		display: flex;
 		justify-content: center;
 		& > div {
@@ -757,6 +761,155 @@ body {
 			}
 			&-text {
 				color: #fff;
+			}
+		}
+	}
+}
+
+
+.section-7 {
+	padding: 55px 0;
+	margin-bottom: 80px;
+	.section {
+		&-title {
+			margin-bottom: 40px;
+		}
+	}
+	.reviews {
+		.owl {
+			&-stage-outer {
+				margin-left: 50px;
+				padding-top: 10px;
+			}
+			&-item {
+				.review {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 700px;
+					min-height: 165px;
+					box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.14);
+					margin-bottom: 50px;
+					padding: 20px 80px 20px 100px;
+					position: relative;
+					&-foto {
+						width: 120px;
+						min-width: 120px;
+						height: 120px; 
+						background-position: center;
+						background-size: cover;
+						box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.142861);
+						position: absolute;
+						top: 50%;
+						left: -50px;
+						transform: translateY(-50%);
+					}
+					&-text {
+						display: flex;
+						flex-direction: column;
+					}
+					&-name {
+						font-family: $second-font-bold;
+						font-size: 20px;
+						line-height: 24px;
+					}
+					&-message {
+						font-size: 16px;
+						line-height: normal;
+						color: #1C0700;
+					}
+				}
+			}
+			
+		}
+	}
+	.owl-dots {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.owl-dot {
+			width: 12px;
+			height: 12px;
+			background: #0E2E48;
+			opacity: 0.5;
+			margin-right: 18px;
+			&:focus {
+				outline: none;
+			}
+			&.active {
+				width: 20px;
+				height: 20px;
+				background: $main-color;
+				opacity: 1;
+				outline: none;
+			}
+		}
+	}
+}
+
+
+.footer {
+	padding-top: 160px;
+	background: url(../img/footer.jpg);
+	background-position: center;
+	background-size: cover;
+	.section {
+		&-title {
+			color: #fff;
+			margin-bottom: 11px;
+		}
+		&-description {
+			font-size: 20px;
+			font-weight: 400;
+			line-height: normal;
+			text-align: center;
+			color: #fff;
+			margin-bottom: 40px; 
+		}
+	} 
+	form {
+		max-width: 480px;
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		
+		input {
+			margin-bottom: 24px;
+			height: 35px;
+			background: none;
+			border: none;
+			border-bottom: 2px solid #D8D8D8;
+			color: #fff;
+			&[type=email] {
+				margin-bottom: 35px;
+			}
+			&[type="submit"] {
+				background: $main-color;
+				border: none;
+				margin: 0 auto;
+				font-size: 20px;
+				padding: 11px 50px;
+				margin-bottom: 180px;
+				height: auto;
+			}
+		}
+	}
+	&-bottom {
+		border-top: 2px solid #D8D8D8;
+		padding: 15px 0 10px 0;
+		color: #fff;
+		&-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			ul {
+				display: flex;
+				li {
+					margin-right: 25px;
+				}
+			}
+			.logo {
+				margin-right: 0;
 			}
 		}
 	}
