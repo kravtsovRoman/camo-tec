@@ -42,7 +42,19 @@ $(document).ready(function () {
         var select = object.children('.block-text-size').children('.select-div')
             .children('.size').val();
 
-        console.log(select);
-        console.log(select);
+        $.ajax({
+            url: 'service/mailing/mail.php',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: {k: 'okey'},
+            success: function (data) {
+                console.log(data);
+            }, error: function () {
+                console.log('404');
+            }
+        });
     });
+
+
 });

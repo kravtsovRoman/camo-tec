@@ -9,3 +9,4 @@
 /**/*.DS_Store
 docker
 docker-compose.yml
+app/index.php
