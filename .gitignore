@@ -7,3 +7,5 @@
 /**/package-lock.json
 /**/Thumbs.db
 /**/*.DS_Store
+docker
+docker-compose.yml

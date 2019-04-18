@@ -43,5 +43,6 @@ $(document).ready(function () {
             .children('.size').val();
 
         console.log(select);
+        console.log(select);
     });
 });
