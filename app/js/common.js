@@ -31,4 +31,17 @@ $(document).ready(function () {
         $("[data-fancybox='gallery']").fancybox({
         });
     });
+
+
+
+
+
+    $('.button-buy').click(function (e) {
+        var object = $(this).closest('div.block-text');
+
+        var select = object.children('.block-text-size').children('.select-div')
+            .children('.size').val();
+
+        console.log(select);
+    });
 });
