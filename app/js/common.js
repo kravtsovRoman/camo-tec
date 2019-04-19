@@ -60,5 +60,27 @@ $(document).ready(function () {
         });
     });
 
+    $('#button_back').click(function (e) {
+        e.preventDefault();
+        var name  = $('#name_back').val();
+        var phone = $('#phone_back').val();
+        var mail  = $('#mail_back').val();
+
+        $.ajax({
+            url: 'service/mailing/mail.php',
+            type: 'POST',
+            cache: false,
+            data: {name: name, phone: phone, mail: mail},
+            success: function (data) {
+                console.log(data);
+            },
+            error: function () {
+                console.log('404');
+            }
+        });
+    });
+
+
+
 
 });

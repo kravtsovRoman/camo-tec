@@ -9,8 +9,8 @@ $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
 $color = isset($_POST['color']) ? $_POST['color'] : '';
 $title = isset($_POST['title']) ? $_POST['title'] : '';
 $size  = isset($_POST['size'])  ? $_POST['size'] : '';
-
-$message = '<table>
+$mail  = isset($_POST['mail'])  ? $_POST['mail'] : false;
+$message = (!$mail)? '<table>
 					<tbody>
 						<tr>
 							<td><b>Имя</b>:</td><td>' . $name . '</td>
@@ -28,7 +28,20 @@ $message = '<table>
 							<td><b>Размер</b>:</td><td>' . $size . '</td>
 						</tr>
 					</tbody>
-				</table>';
+				</table>' : '<table>
+					<tbody>
+						<tr>
+							<td><b>Имя</b>:</td><td>' . $name . '</td>
+						</tr>
+						<tr>
+							<td><b>Телефон</b>:</td><td>' . $phone . '</td>
+						</tr>						
+						<tr>
+							<td><b>E-mail</b>:</td><td>' . $mail . '</td>
+						</tr>
+					</tbody>
+				</table> Необходимо связяться с клиентом';
+
 $header = "From:" . $to ." \r\n";
 
 $header .= "MIME-Version: 1.0\r\n";
