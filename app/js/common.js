@@ -32,26 +32,29 @@ $(document).ready(function () {
         });
     });
 
-    var size = '';
+    var size  = '';
     var title = '';
     var color = '';
     $('.button-buy').click(function () {
         var object = $(this).closest('div.block-text');
-        var size = object.children('.block-text-size').children('.select-div').children('.size').val().trim();
-        var title = object.children('.block-text-title').text().trim();
-        var color = object.children('.block-text-color').find('span').eq(1).text().trim();
+        size   = object.children('.block-text-size').children('.select-div').children('.size').val().trim();
+        title  = object.children('.block-text-title').text().trim();
+        color  = object.children('.block-text-color').find('span').eq(1).text().trim();
+    });
 
-        console.log('size: '+ size + ' title: ' + title + ' color: ' + color);
-
+    $('.modal-form>.button').click(function() {
+        var object = $(this).closest('div.modal-form');
+        var name   = object.children('#client_name').val();
+        var phone  = object.children('#client_phone').val();
         $.ajax({
             url: 'service/mailing/mail.php',
             type: 'POST',
             cache: false,
-            dataType: 'json',
-            data: {k: 'okey'},
+            data: {size: size, title: title, color: color, name: name, phone: phone},
             success: function (data) {
                 console.log(data);
-            }, error: function () {
+            },
+            error: function () {
                 console.log('404');
             }
         });
