@@ -32,15 +32,16 @@ $(document).ready(function () {
         });
     });
 
-
-
-
-
-    $('.button-buy').click(function (e) {
+    var size = '';
+    var title = '';
+    var color = '';
+    $('.button-buy').click(function () {
         var object = $(this).closest('div.block-text');
+        var size = object.children('.block-text-size').children('.select-div').children('.size').val().trim();
+        var title = object.children('.block-text-title').text().trim();
+        var color = object.children('.block-text-color').find('span').eq(1).text().trim();
 
-        var select = object.children('.block-text-size').children('.select-div')
-            .children('.size').val();
+        console.log('size: '+ size + ' title: ' + title + ' color: ' + color);
 
         $.ajax({
             url: 'service/mailing/mail.php',
