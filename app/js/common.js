@@ -24,6 +24,9 @@ $(document).ready(function () {
 		margin: 500,
 	});
 
+	// wow.js
+	new WOW().init();
+
 	// @Fancybox on Screenshot page
 	$(function () {
 		$("[data-fancybox='gallery']").fancybox({

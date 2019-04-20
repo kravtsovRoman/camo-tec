@@ -22,6 +22,8 @@
     "gulp-util": "^3.0.8"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "^3.5.7"
+    "@fancyapps/fancybox": "^3.5.7",
+    "animate.css": "^3.7.0",
+    "wowjs": "^1.1.3"
   }
 }
