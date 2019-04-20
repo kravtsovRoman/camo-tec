@@ -72,7 +72,9 @@ $(document).ready(function () {
             cache: false,
             data: {name: name, phone: phone, mail: mail},
             success: function (data) {
-                console.log(data);
+                $('#name_back').val('');
+                $('#phone_back').val('');
+                $('#mail_back').val('');
             },
             error: function () {
                 console.log('404');

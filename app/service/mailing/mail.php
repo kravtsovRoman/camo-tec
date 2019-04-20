@@ -28,7 +28,7 @@ $message = (!$mail)? '<table>
 							<td><b>Размер</b>:</td><td>' . $size . '</td>
 						</tr>
 					</tbody>
-				</table>' : '<table>
+				</table>' : '<h2>Клиент отавил свои данные перезвоните ему</h2><table>
 					<tbody>
 						<tr>
 							<td><b>Имя</b>:</td><td>' . $name . '</td>
@@ -40,7 +40,7 @@ $message = (!$mail)? '<table>
 							<td><b>E-mail</b>:</td><td>' . $mail . '</td>
 						</tr>
 					</tbody>
-				</table> Необходимо связяться с клиентом';
+				</table>';
 
 $header = "From:" . $to ." \r\n";
 
@@ -51,5 +51,5 @@ $retval = mail($to, $subject, $message, $header);
 if ($retval == true) {
     echo "Success";
 } else {
-    echo $message;
+    echo 'Error';
 }
