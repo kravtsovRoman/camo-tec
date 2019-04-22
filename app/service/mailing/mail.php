@@ -1,6 +1,6 @@
 <?php
 
-$to = "sales@coffee-love.com.ua";
+$to = "polocoolpass@gmail.com";
 
 $subject = "New Order";
 
