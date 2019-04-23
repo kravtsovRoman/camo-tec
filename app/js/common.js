@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
-	$('.pdf-button').click(function () {
-		location.href = "/1.pdf";
+	// $('.pdf-button').click(function () {
+	// 	location.href = "/1.pdf";
 
-	})
+	// })
 
 	// go to top 
 	$('.scroll-btn').on('click', function (e) {
