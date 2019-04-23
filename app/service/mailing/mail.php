@@ -10,7 +10,7 @@ $color = isset($_POST['color']) ? $_POST['color'] : '';
 $title = isset($_POST['title']) ? $_POST['title'] : '';
 $size  = isset($_POST['size'])  ? $_POST['size'] : '';
 $mail  = isset($_POST['mail'])  ? $_POST['mail'] : false;
-$message = (!$mail)? '<table>
+$message = (!$mail)? '<h2>Оформлен новый заказ!</h2><table>
 					<tbody>
 						<tr>
 							<td><b>Имя</b>:</td><td>' . $name . '</td>
@@ -28,7 +28,7 @@ $message = (!$mail)? '<table>
 							<td><b>Размер</b>:</td><td>' . $size . '</td>
 						</tr>
 					</tbody>
-				</table>' : '<h2>Клиент отавил свои данные перезвоните ему</h2><table>
+				</table>' : '<h2>Клиент оcтавил свои данные, перезвоните ему!</h2><table>
 					<tbody>
 						<tr>
 							<td><b>Имя</b>:</td><td>' . $name . '</td>
