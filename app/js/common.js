@@ -1,10 +1,5 @@
 $(document).ready(function () {
 
-	// $('.pdf-button').click(function () {
-	// 	location.href = "/1.pdf";
-
-	// })
-
 	// go to top 
 	$('.scroll-btn').on('click', function (e) {
 		e.preventDefault();
@@ -13,12 +8,6 @@ $(document).ready(function () {
 
 		$('body,html').animate({ scrollTop: top }, 1000);
 	});
-
-	// goToTop.on('click', function (e) {
-	//     e.preventDefault();
-
-	//     $('body,html').animate({scrollTop: $('body,html').offset().top}, 500);
-	// });
 
 	//Slider reviews
 	$(".owl-carousel").owlCarousel({
