@@ -11,6 +11,12 @@
 	opacity: .5;  
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
 .button {
 	max-width: 235px;
 	padding: 10px 30px;

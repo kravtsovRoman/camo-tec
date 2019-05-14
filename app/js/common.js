@@ -48,18 +48,26 @@ $(document).ready(function () {
 		var object = $(this).closest('div.modal-form');
 		var name = object.children('#client_name').val();
 		var phone = object.children('#client_phone').val();
-		$.ajax({
-			url: 'service/mailing/mail.php',
-			type: 'POST',
-			cache: false,
-			data: { size: size, title: title, color: color, name: name, phone: phone },
-			success: function (data) {
-				console.log(data);
-			},
-			error: function () {
-				console.log('404');
-			}
-		});
+		if (name != '' && phone != '') {
+			$(this).attr({ "data-dismiss": "modal" });
+			$.ajax({
+				url: 'service/mailing/mail.php',
+				type: 'POST',
+				cache: false,
+				data: { size: size, title: title, color: color, name: name, phone: phone },
+				success: function (data) {
+					console.log(data);
+				},
+				error: function () {
+					console.log('404');
+				}
+			});
+		}
+		else {
+			$(this).attr({ "data-dismiss": "" });
+		}
+		object.children('#client_name').val() = '';
+		object.children('#client_phone').val() = '';
 	});
 
 	$('#button_back').click(function (e) {
